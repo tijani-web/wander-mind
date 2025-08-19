@@ -1127,13 +1127,13 @@ a{
 }
 
 .editor-heading h1 {
-  font-size: 1.2rem; /* Your specified size */
+  font-size: clamp(1rem, 5vw, 1.5rem); /* Your specified size */
   color: white;
   margin-bottom: 0.5rem;
 }
 
 .editor-heading p {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 4vw, 1.1rem);
   color: #ddd;
   margin-bottom: 1.5rem;
 }
@@ -1144,7 +1144,7 @@ textarea {
   border: none;
   border-radius: 1rem;
   padding: 1.5rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.85rem, 4vw, 1.1rem);
   color: white;
   resize: none;
   margin-bottom: 1.5rem;
@@ -1183,7 +1183,7 @@ button:hover {
 }
 
 .journal-sidebar h2 {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
   margin-bottom: 1rem;
 }
 
@@ -1208,7 +1208,7 @@ button:hover {
 }
 
 .save-note {
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 4vw, 0.95rem);
   color: #ccc;
   margin-top: 0.8rem;
   max-width: 500px;
@@ -1673,7 +1673,7 @@ blockquote {
     font-size: 0.9rem;  
   }
   .main-heading{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 .mood-btn {
   padding: 0.8rem 1.2rem;

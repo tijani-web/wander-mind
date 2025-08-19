@@ -1,13 +1,9 @@
-import express from "express";
-import dotenv from "dotenv";
+// api/openai.js
 import fetch from "node-fetch";
 
-dotenv.config();
+export default async function handler(req, res) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-const app = express();
-app.use(express.json());
-
-app.post("/api/openai", async (req, res) => {
   try {
     const { messages, model } = req.body;
 
@@ -15,18 +11,15 @@ app.post("/api/openai", async (req, res) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`, 
       },
       body: JSON.stringify({ model, messages }),
     });
 
     const data = await response.json();
-    res.json(data);
+    res.status(200).json(data);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server error" });
   }
-});
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
