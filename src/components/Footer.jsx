@@ -1,5 +1,5 @@
 import React from 'react';
-import './wandermindFooter.css';
+import './WandermindFooter.css';
 import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const Footer = () => {

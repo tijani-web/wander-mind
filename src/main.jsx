@@ -26,7 +26,11 @@ const router = createBrowserRouter([
   { path: '/ai-companion', element: <Companion/> },
   { path: '/escapes', element: <EscapesList/> },
   { path: '/escape/:id', element: <EscapeDetails/> }
-])
+],
+  {
+    basename: '/wander-mind'
+  }
+)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

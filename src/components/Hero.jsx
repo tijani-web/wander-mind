@@ -34,8 +34,9 @@ const Hero = () => {
         
         <h1 className="main-heading">
           <span className="heading-line">Your AI-powered</span>
+          <br />
           <span className="heading-line">travel & mindfulness</span>
-          <span className="heading-line">companion.</span>
+          <span className="heading-line" style={{paddingLeft: '1rem'}}>companion.</span>
         </h1>
         
         <ShinyText 
