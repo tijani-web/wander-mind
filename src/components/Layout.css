@@ -1,0 +1,12 @@
+/* Layout.css */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh; /* Ensures layout takes at least full viewport height */
+}
+
+.layout-main-content {
+  flex: 1; /* Makes main content grow to push footer down */
+  padding-bottom: 2rem; /* Space above footer */
+}
